@@ -161,7 +161,7 @@ form .username{
 .username input:focus ~ label{
     top: -5px;
     color: #a71212;
-}
+}   
 .username input:focus ~ span::before,
 .username input:focus ~ span::before{
     width: 100%;
