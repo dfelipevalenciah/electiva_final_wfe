@@ -1,0 +1,318 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+    background: linear-gradient(150deg, #603343, #33603a);
+    height: 100vh;
+}
+
+.formulario{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 450px;
+background: white;
+border-radius: 10px;
+}
+.bodyregister form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    background: white;
+    border-radius: 10px;
+    }
+
+.formulario h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid rgb(35, 136, 92);
+    text-decoration: wavy;
+}
+
+.bodymain marquee{
+    text-decoration: #11622b;
+    text-size-adjust: inherit;
+    color: rgb(245, 238, 238);
+    background-color: black;
+    size: 15px;
+}
+
+.bodylogin marquee{
+    text-decoration: #11622b;
+    text-size-adjust: inherit;
+    color: rgb(245, 238, 238);
+    background-color: black;
+    size: 15px;
+}
+
+.bodyregister marquee{
+    text-decoration: #11622b;
+    text-size-adjust: inherit;
+    color: rgb(245, 238, 238);
+    background-color: black;
+    size: 15px;
+}
+
+.formulario .ini{
+    color: #11622b;
+}
+.formulario form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .username{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.formularioregister .titleregister{
+    color: #11622b;
+}
+.formularioregister form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+.formularioregister label{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+.formularioregister .correo{
+    position: absolute;
+    top: 15%;
+    left: 165px;
+    color: #adadad;
+    transform: translate(-50%);
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.formularioregister .usuario{
+    position: absolute;
+    top: 25%;
+    left: 205px;
+    color: #adadad;
+    transform: translate(-50%);
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.formularioregister .contrasenia{
+    position: absolute;
+    top: 35%;
+    left: 178px;
+    color: #adadad;
+    transform: translate(-50%);
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.formularioregister .concontrasenia{
+    position: absolute;
+    top: 45%;
+    left: 215px;
+    color: #adadad;
+    transform: translate(-50%);
+    font-size: 16px;
+    pointer-events: none;
+}
+.username input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.username label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translate(-50%);
+    font-size: 16px;
+    pointer-events: none;
+}
+.username span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #6C3483;
+}
+
+.usuario span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #6C3483;
+}
+.username input:focus ~ label,
+.username input:focus ~ label{
+    top: -5px;
+    color: #a71212;
+}
+.username input:focus ~ span::before,
+.username input:focus ~ span::before{
+    width: 100%;
+}
+
+ .formularioregister .inputcorreo{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    background: none;
+    outline: none;
+}
+form .contrasenia{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+.contrasenia input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.contrasenia label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translate(-50%);
+    font-size: 16px;
+    pointer-events: none;
+}
+.contrasenia span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #6C3483;
+}
+.contrasenia input:focus ~ label,
+.contrasenia input:focus ~ label{
+    top: -5px;
+    color: #a71212;
+} 
+.contrasenia input:focus ~ span::before,
+.contrasenia input:focus ~ span::before{
+    width: 100%;
+}
+
+.recordar{
+    margin: -5px 0 20px 5px;
+    color: blue;
+    cursor: pointer;
+    font-size: 0.4cm;
+}
+
+.recordar:hover{
+    text-decoration: underline;
+}
+.bodylogin input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #33603a;
+    border-radius: 25px;
+    font-size:  18px; 
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+.bodylogin input[type="submit"]:hover{
+    border-color: #19bc32;
+    transition: .5s;
+}
+.bodyregister input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #33603a;
+    border-radius: 25px;
+    font-size:  18px; 
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+.bodyregister input[type="submit"]:hover{
+    border-color: #19bc32;
+    transition: .5s;
+}
+.registrarse{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+.registrarse a {
+    color: blue;
+    text-decoration: none;
+}
+.registrarse a:hover{
+    text-decoration: underline;
+}
+
+ .header .logo1{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    height:1.7cm;
+    width: 4cm;
+    margin: auto;
+ }
+ .bar_everything{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+    height: max-content;
+    width: max-content;
+ }
+  .bar_everything a{
+    display:inline-block;
+	color:#fff;
+	text-decoration:#43e0e0;
+	padding:10px 20px;
+	line-height:normal;
+	font-size:20px;
+	font-weight:bold;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+ }
+ .bar_everything a:hover{
+    background:#43e795;
+	border-radius:50px;
+ }
+
+ 
+
+ @media screen and (max-width: 950px){
+    .bar_everything nav {
+        width: 100%;
+        text-align: center;
+        line-height: 100px;
+    }
+    
+ }
+    
