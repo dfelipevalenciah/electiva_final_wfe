@@ -40,20 +40,24 @@ module.exports = {
           key: "id_profesion",
         },
       },
-      servicio: {
+      servicio_id_servicio: {
         type: Sequelize.INTEGER,
-        servicio:class{
-          constructor(id_servicio){
-            this.id_servicio=id_servicio;
-          }
-        }
+        allowNull: false,
+        references: {
+          model: {
+            tableName: "servicios",
+          },
+          key: "id_servicio"
+        },
       },
-      registro: {
+      registros_id_registros: {
         type: Sequelize.INTEGER,
-        registro:class{
-          constructor(id_registro){
-            this.id_registro=id_registro;
-          }
+        allowNull: false,
+        references: {
+          model:{
+            tableName: "registros",
+          },
+          key: "id_registro"
         }
       },
       token_google: {
