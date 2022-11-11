@@ -30,13 +30,15 @@ module.exports = {
       lugar_residencia_persona: {
         type: Sequelize.STRING
       },
-      profesion: {
+      profesions_id_profesions:{
         type: Sequelize.INTEGER,
-        profesion:class{
-          constructor(id_profesion){
-            this.id_profesion=id_profesion;
-          }
-        }
+        allowNull: false,
+        references: {
+          model: {
+            tableName: "profesions",
+          },
+          key: "id_profesion",
+        },
       },
       servicio: {
         type: Sequelize.INTEGER,
