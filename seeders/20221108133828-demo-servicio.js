@@ -3,23 +3,22 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+    return queryInterface.bulkInsert('servicios',[{
+      nombre_servicio: 'Mantenimiento app',
+      servicio_descripcion: 'realizar mantenimiento de app',
+      servicio_ciudad: 'popayan',
+      servicio_fecha:'2022-08-20',
+      servicio_valor:200,
+      servicio_imagen: '1111',
+      servicio_direccion:'Calle 5 # 22-10',
+      estado_solicitud: 1,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }]);
   },
 
   async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+    return queryInterface.bulkDelete('servicios', null, {});
+
   }
 };
