@@ -14,9 +14,28 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   registro.init({
-    correo: DataTypes.STRING,
-    contrasenia: DataTypes.STRING,
-    nombre_usuario: DataTypes.STRING
+    
+    id_registro:{
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    correo:{
+      type: DataTypes.INTEGER,
+      defaultValue: false,
+      allowNull: false,
+    },
+    contrasenia:{
+      type: DataTypes.INTEGER,
+      defaultValue: false,
+      allowNull: false,
+    },
+    nombre_usuario:{
+      type: DataTypes.INTEGER,
+      defaultValue: false,
+      allowNull: false,
+    },
+
   }, {
     sequelize,
     modelName: 'registro',
