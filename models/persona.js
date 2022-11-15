@@ -1,7 +1,8 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const {Model} = require('sequelize');
+const Profesion = require("./profesion");
+const Servicio = require("./servicio");
+const Registro = require("./registro");
 module.exports = (sequelize, DataTypes) => {
   class persona extends Model {
     /**
@@ -11,23 +12,58 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      persona.hasMany(models.Profesion,{foreignKey: "id_profesion"});
+      persona.hasMany(models.Servicio,{foreignKey: "id_id_servicio"});
+      persona.hasMany(models.Registro,{foreignKey: "id_registro"});
     }
   }
   persona.init({
-    numero_identificacion: DataTypes.STRING,
-    nombres_persona: DataTypes.STRING,
-    telefono_persona: DataTypes.STRING,
-    apellidos_persona: DataTypes.STRING,
-    email_persona: DataTypes.STRING,
-    edad_persona: DataTypes.STRING,
-    lugar_residencia_persona: DataTypes.STRING,
-    profesion: DataTypes.STRING,
-    servicio: DataTypes.STRING,
-    registro: DataTypes.STRING,
-    token_google: DataTypes.STRING
-  }, {
+    
+    id: {
+      type:DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    nombres_persona: {
+      type: DataTypes.STRING(255),
+      defaultValue: false,
+      allowNull: false,
+    },
+    telefono_persona: {
+      type: DataTypes.STRING(255),
+      defaultValue: false,
+      allowNull: false,
+    },
+    apellidos_persona: {
+      type: DataTypes.STRING(255),
+      defaultValue: false,
+      allowNull: false,
+    },
+    email_persona: {
+      type: DataTypes.STRING(255),
+      defaultValue: false,
+      allowNull: false,
+    },
+    edad_persona: {
+      type: DataTypes.STRING(255),
+      defaultValue: false,
+      allowNull: false,
+    },
+    lugar_residencia_persona: {
+      type: DataTypes.STRING(255),
+      defaultValue: false,
+      allowNull: false,
+    },
+    token_google: {
+      type: DataTypes.STRING(255),
+      defaultValue: false,
+      allowNull: false,
+    },
+  }, 
+  {
     sequelize,
     modelName: 'persona',
+    tableName: "persona",
   });
   return persona;
 };

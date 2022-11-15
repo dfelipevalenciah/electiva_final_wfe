@@ -2,8 +2,8 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('estado_solicituds', {
-      id_estado_solicutud: {
+    await queryInterface.createTable('estado_solicitud', {
+      id_estado_solicitud: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
@@ -29,6 +29,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('estado_solicituds');
+    await queryInterface.dropTable('estado_solicitud');
   }
 };

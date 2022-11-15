@@ -14,8 +14,23 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   profesion.init({
-    profesion_nombre: DataTypes.STRING,
-    profesion_descripcion: DataTypes.STRING
+
+    id_profesion: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    profesion_nombre:{
+      type: DataTypes.STRING(255),
+      defaultValue: false,
+      allowNull: false,
+    },
+    profesion_descripcion:{
+      type: DataTypes.STRING(255),
+      defaultValue: false,
+      allowNull: false,
+    },
+    
   }, {
     sequelize,
     modelName: 'profesion',

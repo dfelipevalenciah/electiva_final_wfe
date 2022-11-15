@@ -32,11 +32,13 @@ module.exports = {
       },
       estado_solicitud: {
         type: Sequelize.INTEGER,
-        estado_solicitud:class{
-          constructor(id_estado_solicitud){
-            this.id_estado_solicitud=id_estado_solicitud;
-          }
-        }
+        allowNull: false,
+        references: {
+          model: {
+            tableName: "estado_solicitud"
+          },
+          key: "id_estado_solicitud"
+        },
       },
       createdAt: {
         allowNull: false,

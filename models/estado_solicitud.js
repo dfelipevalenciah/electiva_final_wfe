@@ -10,13 +10,31 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+    estado_solicitud.hasMany(models.servicio, { foreingKey: "id_servicio"})
+
     }
   }
   estado_solicitud.init({
-    pendiente: DataTypes.TINYINT,
-    aprobado: DataTypes.TINYINT,
-    rechazado: DataTypes.TINYINT
+    id_estado_solicitud: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    pendiente: {
+      type: DataTypes.TINYINT,
+      defaultValue: false,
+      allowNull: false,
+    },
+    aprobado: {
+      type: DataTypes.TINYINT,
+      defaultValue: false,
+      allowNull: false,
+    },
+    rechazado: {
+      type: DataTypes.TINYINT,
+      defaultValue: false,
+      allowNull: false,
+    },
   }, {
     sequelize,
     modelName: 'estado_solicitud',
