@@ -4,14 +4,14 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
     return queryInterface.bulkInsert('servicios',[{
-      nombre_servicio: 'Mantenimiento app',
-      servicio_descripcion: 'realizar mantenimiento de app',
-      servicio_ciudad: 'popayan',
-      servicio_fecha:'2022-08-20',
+      nombre_servicio: 'proceso contabilidad',
+      servicio_descripcion: 'llevar los conteos de cantidades de solicitudes satisfacctorias',
+      servicio_ciudad: 'bogota',
+      servicio_fecha:'2022-08-25',
       servicio_valor:200,
-      servicio_imagen: '1111',
-      servicio_direccion:'Calle 5 # 22-10',
-      estado_solicitud: 1,
+      servicio_imagen: '442',
+      servicio_direccion:'Calle 128 # 12-33',
+      estado_solicitud: 3,
       createdAt: new Date(),
       updatedAt: new Date()
     }]);

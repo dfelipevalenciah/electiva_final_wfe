@@ -4,9 +4,9 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
     return queryInterface.bulkInsert('registros',[{
-    correo: 'eduard.pilli@campusucc.edu.co',
-    contrasenia: 'eduard123',
-    nombre_usuario: 'eduardpi',
+    correo: 'andres_002@campusucc.edu.co',
+    contrasenia: 'andres1123',
+    nombre_usuario: 'andresdiaz',
     createdAt: new Date(),
     updatedAt: new Date()
   }]);

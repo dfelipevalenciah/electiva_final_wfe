@@ -4,13 +4,16 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
     return queryInterface.bulkInsert('personas',[{
-      nombre_persona: 'Andres',
-      telefono_persona: '32122251225',
-      apellidos_persona: 'Diaz',
-      email_persona:'andres1@gmail.com',
-      edad_persona:'98',
-      lugar_residencia_persona: 'calle 8 # 11 - 22',
-      token_google:'225443'
+      numero_identificacion: '6588789',
+      nombres_persona: 'Daniel',
+      telefono_persona: '3265445789',
+      apellidos_persona: 'Valencia',
+      email_persona:'caniel1@gmail.com',
+      edad_persona:'23',
+      lugar_residencia_persona: 'calle 6 # 7 - 22',
+      token_google:'001234',
+      createdAt: new Date(),
+      updatedAt: new Date()
     }]);
   },
 

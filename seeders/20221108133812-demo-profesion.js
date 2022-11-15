@@ -4,8 +4,8 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
     return queryInterface.bulkInsert('profesions',[{
-      profesion_nombre: 'ingeniero de sistemas',
-      profesion_descripcion: 'persona encargada de realizar el mantimiento de las aplicaciones',
+      profesion_nombre: 'contador',
+      profesion_descripcion: 'encargado de la contabilidad de la empresa',
       createdAt: new Date(),
       updatedAt: new Date()
     }]);
