@@ -10,7 +10,7 @@ module.exports = {
       apellidos_persona: 'Valencia',
       email_persona:'caniel1@gmail.com',
       edad_persona:'23',
-      lugar_residencia_persona: 'calle 6 # 7 - 22',
+      lugar_residencia_persona: 'calle 7 # 7 - 22',
       token_google:'001234',
       createdAt: new Date(),
       updatedAt: new Date()
