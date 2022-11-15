@@ -11,10 +11,10 @@ module.exports={
 ListAt(req,res){
               return estado_solicitud.findAll({
                             where: {
-                                 id_estado_solicitud: req.params.id
+                                 id_estado_solicitud: req.params.id_estado_solicitud
                             }
               })
-              .then(persona => res.status(200).send(estado_solicitud))
+              .then(estado_solicitud => res.status(200).send(estado_solicitud))
               .catch(error => res.status(400).send(error))
 },
 
@@ -22,7 +22,7 @@ DeleteEstado_Solicitud(req, res) {
    return estado_solicitud
      .destroy({
        where: {
-         id: req.params.id,
+        id_estado_solicitud: req.params.id_estado_solicitud,
        },
      })
      .then((estado_solicitud) => res.sendStatus(estado_solicitud))
@@ -40,7 +40,7 @@ DeleteEstado_Solicitud(req, res) {
        },
        {
          where: {
-           id: req.params.id,
+           id_estado_solicitud: req.params.id_estado_solicitud,
          },
        }
      )

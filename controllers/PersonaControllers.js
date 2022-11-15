@@ -11,7 +11,7 @@ module.exports={
 ListAt(req,res){
               return persona.findAll({
                             where: {
-                                 id: req.params.id
+                              id_persona: req.params.id_persona
                             }
               })
               .then(persona => res.status(200).send(persona))
@@ -22,7 +22,7 @@ DeletePersona(req, res) {
      return persona
        .destroy({
          where: {
-           id: req.params.id,
+          id_persona: req.params.id_persona,
          },
        })
        .then((persona) => res.sendStatus(persona))
@@ -41,11 +41,11 @@ DeletePersona(req, res) {
            edad_persona: req.body.edad_persona,
            lugar_residencia_persona: req.body.lugar_residencia_persona,
 
-           
+
          },
          {
            where: {
-             id: req.params.id,
+            id_persona: req.params.id_persona,
            },
          }
        )

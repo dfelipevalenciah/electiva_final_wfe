@@ -13,7 +13,7 @@ module.exports={
 ListAt(req,res){
               return servicio.findAll({
                             where: {
-                                 id_servicio: req.params.id
+                                 id_servicio: req.params.id_servicio
                             }
               })
               .then(servicio => res.status(200).send(servicio))
@@ -24,7 +24,7 @@ DeleteServicio(req, res) {
      return servicio
        .destroy({
          where: {
-           id: req.params.id,
+           id_servicio: req.params.id_servicio,
          },
        })
        .then((servicio) => res.sendStatus(servicio))
@@ -47,7 +47,7 @@ DeleteServicio(req, res) {
          },
          {
            where: {
-             id: req.params.id,
+             id_servicio: req.params.id_servicio,
            },
          }
        )
