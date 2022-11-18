@@ -30,14 +30,14 @@ module.exports = {
       lugar_residencia_persona: {
         type: Sequelize.STRING
       },
-      profesions_id_profesions:{
+      profesion_id_profesion:{
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
           model: {
-            tableName: "profesions",
+            tableName: "profesion",
           },
-          key: "id_profesion",
+          key: "id",
         },
       },
       servicio_id_servicio: {
@@ -45,9 +45,9 @@ module.exports = {
         allowNull: false,
         references: {
           model: {
-            tableName: "servicios",
+            tableName: "servicio",
           },
-          key: "id_servicio"
+          key: "id"
         },
       },
       registros_id_registros: {
@@ -57,7 +57,7 @@ module.exports = {
           model:{
             tableName: "registros",
           },
-          key: "id_registro"
+          key: "id"
         }
       },
       token_google: {

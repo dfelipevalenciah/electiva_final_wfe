@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       persona.hasMany(models.profesion,{foreignKey: "id_profesion"});
       persona.hasMany(models.servicio,{foreignKey: "id_id_servicio"});
-      persona.hasMany(models.registro,{foreignKey: "id_registro"});
+      persona.hasMany(models.registro,{foreignKey: "id"});
     }
   }
   persona.init({

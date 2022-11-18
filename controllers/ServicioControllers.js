@@ -13,7 +13,7 @@ module.exports = {
   ListAt(req, res) {
     return servicio.findAll({
       where: {
-        id_servicio: req.params.id_servicio
+        id: req.params.id
       }
     })
       .then(servicio => res.status(200).send(servicio))
@@ -24,7 +24,7 @@ module.exports = {
     return servicio
       .destroy({
         where: {
-          id_servicio: req.params.id_servicio,
+          id: req.params.id,
         },
       })
       .then((servicio) => res.sendStatus(servicio))
@@ -42,12 +42,12 @@ module.exports = {
           servicio_valor: req.body.servicio_valor,
           servicio_imagen: req.body.servicio_imagen,
           servicio_direccion: req.body.servicio_direccion,
-          id_estado_solicitud: req.body.id_estado_solicitud,
+          id: req.body.id,
 
         },
         {
           where: {
-            id_servicio: req.params.id_servicio,
+            id: req.params.id,
           },
         }
       )
@@ -65,7 +65,7 @@ module.exports = {
         servicio_valor: req.params.servicio_valor,
         servicio_imagen: req.params.servicio_imagen,
         servicio_direccion: req.params.servicio_direccion,
-        id_estado_solicitud: req.params.id_estado_solicitud,
+        id: req.params.id,
       })
       .then((servicio) => res.status(200).send(servicio))
       .catch((error) => res.status(400).send(error));
@@ -84,7 +84,7 @@ module.exports = {
     return persona
       .findAll({
         where:{
-          servicio_id_servicio: req.params.servicio_id_servicio
+          id: req.params.id
         }
       })
       .then((persona) => res.status(200).send(persona))

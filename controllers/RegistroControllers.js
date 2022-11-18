@@ -11,7 +11,7 @@ module.exports = {
   ListAt(req, res) {
     return registro.findAll({
       where: {
-        id_registro: req.params.id_registro
+        id: req.params.id
       }
     })
       .then(registro => res.status(200).send(registro))
@@ -21,7 +21,7 @@ module.exports = {
     return registro
       .destroy({
         where: {
-          id_registro: req.params.id_registro,
+          id: req.params.id,
         },
       })
       .then((registro) => res.sendStatus(registro))
@@ -37,7 +37,7 @@ module.exports = {
         },
         {
           where: {
-            id_registro: req.params.id_registro,
+            id: req.params.id,
           },
         }
       )

@@ -11,7 +11,7 @@ module.exports = {
   ListAt(req, res) {
     return profesion.findAll({
       where: {
-        id_profesion: req.params.id_profesion
+        id: req.params.id
       }
     })
       .then(profesion => res.status(200).send(profesion))
@@ -21,7 +21,7 @@ module.exports = {
     return profesion
       .destroy({
         where: {
-          id_profesion: req.params.id_profesion,
+          id: req.params.id,
         },
       })
       .then((profesion) => res.sendStatus(profesion))
@@ -36,7 +36,7 @@ module.exports = {
         },
         {
           where: {
-            id_profesion: req.params.id_profesion,
+            id: req.params.id,
           },
         }
       )
@@ -57,7 +57,7 @@ module.exports = {
     return profesion
       .findAll({
         where:{
-          id_profesion: req.params.id_profesion
+          id: req.params.id
         }
       })
       .then((profesion) => res.status(200).send(profesion))

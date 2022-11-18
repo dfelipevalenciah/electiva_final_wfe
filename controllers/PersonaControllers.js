@@ -11,7 +11,7 @@ module.exports = {
   ListAt(req, res) {
     return persona.findAll({
       where: {
-        id_persona: req.params.id_persona
+        id: req.params.id
       }
     })
       .then(persona => res.status(200).send(persona))
@@ -22,7 +22,7 @@ module.exports = {
     return persona
       .destroy({
         where: {
-          id_persona: req.params.id_persona,
+          id: req.params.id,
         },
       })
       .then((persona) => res.sendStatus(persona))
@@ -45,7 +45,7 @@ module.exports = {
         },
         {
           where: {
-            id_persona: req.params.id_persona,
+            id: req.params.id,
           },
         }
       )
@@ -73,7 +73,7 @@ module.exports = {
     return persona
       .findAll({
         where:{
-          id_persona: req.params.id_persona
+          id: req.params.id
         }
       })
       .then((persona) => res.status(200).send(persona))

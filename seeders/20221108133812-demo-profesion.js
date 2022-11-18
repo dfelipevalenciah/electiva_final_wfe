@@ -3,7 +3,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    return queryInterface.bulkInsert('profesions',[{
+    return queryInterface.bulkInsert('profesion',[{
       profesion_nombre: 'contador',
       profesion_descripcion: 'encargado de la contabilidad de la empresa',
       createdAt: new Date(),
@@ -13,6 +13,6 @@ module.exports = {
   
 
   async down (queryInterface, Sequelize) {
-    return queryInterface.bulkDelete('profesions', null, {});
+    return queryInterface.bulkDelete('profesion', null, {});
   }
 };

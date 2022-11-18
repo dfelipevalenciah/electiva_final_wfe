@@ -10,11 +10,11 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-    servicio.belongsTo(models.estado_solicitud, { foreingKey: "id_estado_solicitud"})
+    servicio.belongsTo(models.estado_solicitud, { foreingKey: "id"})
     }
   }
   servicio.init({
-    id_servicio: {
+    id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,

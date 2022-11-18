@@ -3,7 +3,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    return queryInterface.bulkInsert('servicios',[{
+    return queryInterface.bulkInsert('servicio',[{
       nombre_servicio: 'proceso contabilidad',
       servicio_descripcion: 'llevar los conteos de cantidades de solicitudes satisfacctorias',
       servicio_ciudad: 'bogota',
@@ -18,7 +18,7 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    return queryInterface.bulkDelete('servicios', null, {});
+    return queryInterface.bulkDelete('servicio', null, {});
 
   }
 };

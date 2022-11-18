@@ -10,12 +10,12 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-    estado_solicitud.hasMany(models.servicio, { foreingKey: "id_servicio"})
+    estado_solicitud.hasMany(models.servicio, { foreingKey: "id"})
 
     }
   }
   estado_solicitud.init({
-    id_estado_solicitud: {
+    id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,

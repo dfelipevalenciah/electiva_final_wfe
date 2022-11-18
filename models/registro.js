@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   registro.init({
     
-    id_registro:{
+    id:{
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,

@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   profesion.init({
 
-    id_profesion: {
+    id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,

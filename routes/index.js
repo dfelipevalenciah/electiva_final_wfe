@@ -29,9 +29,12 @@ router.get('api/servicio/',ServicioControllers.ListarServicioEstado_solicitud);
 router.get('api/registro/',RegistroControllers.ListarPersonasRegistradas);
 //Consulta de Listar profesiones - Hector
 //router.get('api/profesiones/',ProfesionControllersControllers.ListarP);
-//Listar Servicios por persona - Felipe
-router.get('api/servicio/',ServicioControllers.ListarServicio_Persona);
+//Listar servicio por persona - Felipe
+router.get('/api/profesion', ProfesionControllers.List);
 //
+router.get('api/servicio',ServicioControllers.ListarServicio_Persona);
+
+
 
 
 
