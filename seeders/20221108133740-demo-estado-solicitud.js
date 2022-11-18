@@ -3,7 +3,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    return queryInterface.bulkInsert('estado_solicitud',[{
+    return queryInterface.bulkInsert('estado_solicituds',[{
       pendiente: 1 ,
       aprobado: 0,
       rechazado: 0,
@@ -13,6 +13,6 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    return queryInterface.bulkDelete('estado_solicitud', null, {});
+    return queryInterface.bulkDelete('estado_solicituds', null, {});
   }
 };

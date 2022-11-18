@@ -9,7 +9,8 @@ module.exports = {
       .catch(error => res.status(400).send(error))
   },
   ListAt(req, res) {
-    return estado_solicitud.findAll({
+    return estado_solicitud
+    .findAll({
       where: {
         id_estado_solicitud: req.params.id_estado_solicitud
       }
@@ -49,7 +50,7 @@ module.exports = {
       });
   },
   CreateEstado_Solicitud(req, res) {
-    return estadisticas
+    return estado_solicitud
       .create({
         pendiente: req.params.pendiente,
         aprobado: req.params.aprobado,

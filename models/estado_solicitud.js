@@ -35,6 +35,7 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: false,
       allowNull: false,
     },
+    
   }, {
     sequelize,
     modelName: 'estado_solicitud',

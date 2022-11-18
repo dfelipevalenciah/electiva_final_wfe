@@ -35,7 +35,7 @@ module.exports = {
         allowNull: false,
         references: {
           model: {
-            tableName: "estado_solicitud"
+            tableName: "estado_solicituds"
           },
           key: "id_estado_solicitud"
         },
