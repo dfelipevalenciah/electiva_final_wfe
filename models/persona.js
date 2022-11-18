@@ -1,8 +1,8 @@
 'use strict';
 const {Model} = require('sequelize');
-const Profesion = require("./profesion");
-const Servicio = require("./servicio");
-const Registro = require("./registro");
+const profesion = require("./profesion");
+const servicio = require("./servicio");
+const registro = require("./registro");
 module.exports = (sequelize, DataTypes) => {
   class persona extends Model {
     /**
@@ -12,9 +12,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      persona.hasMany(models.Profesion,{foreignKey: "id_profesion"});
-      persona.hasMany(models.Servicio,{foreignKey: "id_id_servicio"});
-      persona.hasMany(models.Registro,{foreignKey: "id_registro"});
+      persona.hasMany(models.profesion,{foreignKey: "id_profesion"});
+      persona.hasMany(models.servicio,{foreignKey: "id_id_servicio"});
+      persona.hasMany(models.registro,{foreignKey: "id_registro"});
     }
   }
   persona.init({
