@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const registro = require('../models').registro;
+const registro = require('../models').Registros;
 
 module.exports = {
 

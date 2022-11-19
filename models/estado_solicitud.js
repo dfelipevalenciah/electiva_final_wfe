@@ -3,18 +3,13 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class estado_solicitud extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-    estado_solicitud.hasMany(models.servicio, { foreingKey: "id"})
+  class Estado_solicitud extends Model {
 
+    static associate(models) {
+     Estado_solicitud.hasMany(models.Servicio, { foreingKey: "estado_solicitud_id"})
     }
   }
-  estado_solicitud.init({
+  Estado_solicitud.init({
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -38,7 +33,8 @@ module.exports = (sequelize, DataTypes) => {
     
   }, {
     sequelize,
-    modelName: 'estado_solicitud',
+    modelName: 'Estado_solicitud',
+    tableName: 'estado_solicitud',
   });
-  return estado_solicitud;
+  return Estado_solicitud;
 };

@@ -1,19 +1,14 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const {Model} = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class servicio extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
+  class Servicio extends Model {
+
     static associate(models) {
-    servicio.belongsTo(models.estado_solicitud, { foreingKey: "id"})
+      Servicio.hasMany(models.Persona,{foreingKey:"servicio_id"});
+      Servicio.belongsTo(models.Estado_solicitud,{foreingKey:"estado_solicitud_id"});
     }
   }
-  servicio.init({
+  Servicio.init({
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -54,15 +49,16 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: false,
       allowNull: false,
     },
-    id_estado_solicitud: {
+    estado_solicitud_id: {
       type:DataTypes.INTEGER,
       allowNull: false,
-      references: {model: "estado_solicitud", key:"id_estado_solicitud"}
+      references: {model: "estado_solicitud", key:"id"}
     },
   }, 
   {
     sequelize,
-    modelName: 'servicio',
+    modelName: 'Servicio',
+    tableName: "servicio",
   });
-  return servicio;
+  return Servicio;
 };

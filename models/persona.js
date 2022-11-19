@@ -1,23 +1,21 @@
 'use strict';
 const {Model} = require('sequelize');
-const profesion = require("./profesion");
-const servicio = require("./servicio");
-const registro = require("./registro");
+//*
+//const Profesion = require("./profesion");
+//const Servicio = require("./servicio");
+//const Registro = require("./registros");
+
 module.exports = (sequelize, DataTypes) => {
-  class persona extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
+  class Persona extends Model {
+
     static associate(models) {
-      // define association here
-      persona.hasMany(models.profesion,{foreignKey: "id_profesion"});
-      persona.hasMany(models.servicio,{foreignKey: "id_id_servicio"});
-      persona.hasMany(models.registro,{foreignKey: "id"});
+
+      Persona.belongsTo(models.Profesion,{foreignKey: "profesion_id"});
+      Persona.belongsTo(models.Servicio,{foreignKey: "servicio_id"});
+      Persona.belongsTo(models.Registros,{foreignKey: "registros_id"});
     }
   }
-  persona.init({
+  Persona.init({
     
     id: {
       type:DataTypes.INTEGER,
@@ -54,6 +52,21 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: false,
       allowNull: false,
     },
+    profesion_id: {
+      type:DataTypes.INTEGER,
+      allowNull: false,
+      references: {model: "profesion", key:"id"}
+    },
+    servicio_id: {
+      type:DataTypes.INTEGER,
+      allowNull: false,
+      references: {model: "servicio", key:"id"}
+    },
+    registros_id: {
+      type:DataTypes.INTEGER,
+      allowNull: false,
+      references: {model: "registros", key:"id"}
+    },
     token_google: {
       type: DataTypes.STRING(255),
       defaultValue: false,
@@ -62,8 +75,8 @@ module.exports = (sequelize, DataTypes) => {
   }, 
   {
     sequelize,
-    modelName: 'persona',
+    modelName: 'Persona',
     tableName: "persona",
   });
-  return persona;
+  return Persona;
 };

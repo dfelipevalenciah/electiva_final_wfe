@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
-const servicio = require('../models').servicio;
-const estado_solicitud = require('../models').estado_solicitud;
+const servicio = require('../models').Servicio;
+//const estado_solicitud = require('../models').Estado_solicitud;
 
 
 module.exports = {
@@ -10,7 +10,7 @@ module.exports = {
       .then(servicio => res.status(200).send(servicio))
       .catch(error => res.status(400).send(error))
   },
-  ListAt(req, res) {
+/*   ListAt(req, res) {
     return servicio.findAll({
       where: {
         id: req.params.id
@@ -90,5 +90,5 @@ module.exports = {
       .then((persona) => res.status(200).send(persona))
       .catch((error) => res.status(400).send(error));
   },
-
+ */
 }

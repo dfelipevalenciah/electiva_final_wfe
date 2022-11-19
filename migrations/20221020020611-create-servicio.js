@@ -30,12 +30,12 @@ module.exports = {
       servicio_direccion: {
         type: Sequelize.STRING
       },
-      estado_solicitud: {
+      estado_solicitud_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
           model: {
-            tableName: "estado_solicituds"
+            tableName: "estado_solicitud"
           },
           key: "id"
         },

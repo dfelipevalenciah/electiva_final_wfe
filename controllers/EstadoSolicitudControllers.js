@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const estado_solicitud = require('../models').estado_solicitud;
+const estado_solicitud = require('../models').Estado_solicitud;
 
 module.exports = {
 

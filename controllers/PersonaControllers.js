@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const persona = require('../models').persona;
+const persona = require('../models').Persona;
 
 module.exports = {
 

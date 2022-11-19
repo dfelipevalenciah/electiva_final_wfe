@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('personas', {
+    await queryInterface.createTable('persona', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -30,7 +30,7 @@ module.exports = {
       lugar_residencia_persona: {
         type: Sequelize.STRING
       },
-      profesion_id_profesion:{
+      profesion_id:{
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
@@ -40,7 +40,7 @@ module.exports = {
           key: "id",
         },
       },
-      servicio_id_servicio: {
+      servicio_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
@@ -50,7 +50,7 @@ module.exports = {
           key: "id"
         },
       },
-      registros_id_registros: {
+      registros_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
@@ -74,6 +74,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('personas');
+    await queryInterface.dropTable('persona');
   }
 };
